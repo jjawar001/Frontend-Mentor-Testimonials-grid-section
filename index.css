@@ -1,6 +1,6 @@
 :root {
   /* colors */
-  --darkblue: darkblue;
+  --darkblue: hsl(219, 29%, 14%);
   --black: black;
   --white: white;
   --grey100: #E7EAEE;
@@ -142,8 +142,7 @@ article {
   }
 
   .grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
   }
   
   .grid :nth-child(1),
@@ -161,8 +160,7 @@ article {
 /* desktop mode */
 @media (min-width: 1000px){
   .grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, minmax(10px, 1fr));
   }
 
   .grid :nth-child(1) {
